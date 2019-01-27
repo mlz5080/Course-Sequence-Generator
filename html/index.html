@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Course Sequence Simulator</title>
+</head>
+
+<link rel="stylesheet" href="./stylesheets/login.css">
+<body style="background-color:Aliceblue;">
+	<div class="Logo">
+	<a href="http://www.concordia.ca/" target="_blank"><img class="img-Conlogo" src="image/concordia-logo.png" alt="Concordia logo;"></a>
+	</div>
+<h1 style="color:orange">User<span id="login_txt">Login</span></h1 >
+<!-- <embed src="https://vsb.concordia.ca/s/pbnhnmu" style="width:1000px; height: 800px;"> -->
+
+
+
+	<center>
+	<div class="col">
+        <div class="hide-md-lg">
+          <p>Sign in with your Concordia credentials:</p>
+        </div>
+	
+	
+	
+		<div id="signup-form">
+
+		  <input class="input" type="email" id="email" placeholder="enter your email"><br/>
+		  <input class="input" type="password" id="password" placeholder="enter your password"/><br/>
+		  <button style="width: 110%;" class= "btn btn_signup" type="button" onclick="signup()" name="button" id="signup">Signup</button>
+		  <button style="width: 110%;" class= "btn btn_login" type="button" onclick="javascript:login()"name="button" id="login">Login</button>
+		<script>
+		var input = document.getElementById("password");
+		input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+             document.getElementById("login").click();
+        }
+    });
+	
+    </script>
+
+		</div>
+	
+	
+	</div>
+	 </center>
+	
+	
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBZ_nUpm0F0kEyjM3iApHT-dPJomgbTlP0",
+    authDomain: "conuhacksv.firebaseapp.com",
+    databaseURL: "https://conuhacksv.firebaseio.com",
+    projectId: "conuhacksv",
+    storageBucket: "conuhacksv.appspot.com",
+    messagingSenderId: "716642151510"
+  };
+  firebase.initializeApp(config);
+ </script>
+<script src="scripts/login.js"></script>
+</html>

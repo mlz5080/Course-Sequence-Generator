@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>soen 341 Course sequence generator</title>
+</head>
+
+<link rel="stylesheet" href="./stylesheets/quiz.css">
+
+<body style="background-color:Aliceblue;">
+    <span id="forward"><i>Go to the course builder</i><a href="classbuilder.html"><img class="forwardbtn" src="image/forwardbtn.png" title="Go to the course builder"></a></span>
+   <br><br><br> <br><br><br> <br><br><br>
+   
+   <center>
+   <div id="quiz">
+            <p id="error_message" style="color:red"></p>
+            <h3 id="quiz_title">Hello!</h3>
+			
+            <div id="quiz_content">
+                <p id="quiz_content_text">Welcome to Course Sequence Builder. Before we continue, we just need some information from you.</p>
+            </div>
+			
+            <button onclick="javascript:next()" class="btn_cont" type="button" id="next_btn">Continue</button>
+			<!--
+		<script>
+
+        if (event.keyCode === 13) {
+		next()
+        }
+		</script> -->
+    </div>
+	</center>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyBZ_nUpm0F0kEyjM3iApHT-dPJomgbTlP0",
+    authDomain: "conuhacksv.firebaseapp.com",
+    databaseURL: "https://conuhacksv.firebaseio.com",
+    projectId: "conuhacksv",
+    storageBucket: "conuhacksv.appspot.com",
+    messagingSenderId: "716642151510"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    </script>
+<script src="scripts/logout.js"></script>
+<script src="scripts/DBoperations.js"></script>
+<script src="scripts/main.js"></script>
+</html>

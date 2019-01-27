@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>soen 341 Course sequence generator</title>
+</head>
+
+<link rel="stylesheet" href="./stylesheets/builder.css">
+<body onload="myFunction()" style="background-color:Aliceblue;">
+
+<span id="sign_out">
+<button onclick="logout()" class="btn1" type="button" id="signout" >SignOut</button>
+</span>
+<br/>
+<center>
+<div id="loader"></div>
+<div style="display:none" id="main_content" class = "animate-bottom">
+<h1>Voilà</h1>
+<a href="" target="_blank"><img class="img-Conlogo" src="image/voila.jpg" alt="Concordia logo;"></a>
+<h2>↓↓↓This is what we generated for you↓↓↓</h2>
+<div id="embedded" style="display:none">
+<embed src="https://vsb.concordia.ca/s/pbnhnmu" style="width:1000px; height: 800px;">
+</div>
+
+<button onclick="toggle('embedded')" class="btn btn_sh" type="button" id="showhide">Show/Hide Class builder</button>
+</div>
+</center>
+
+<div id="debug" style="display: none">
+<h2>To retrive data from DB</h2>
+<p id="coursedetail" >!!--Detail is displayed here--!!</p>
+Subject: <input type="text" name="subj" id="textfield1" placeholder="ELEC" required>
+Number: <input type="text" name="numb" id="textfield2" placeholder="372" required><br>
+<input type="checkbox" name="career" id="cb1">Career <br>
+<input type="checkbox" name="catalog" id="cb2">Catalog <br>
+<input type="checkbox" name="cu" id="cb3">class Unit<br>
+<input type="checkbox" name="cc" id="cb4">Component code<br>
+<input type="checkbox" name="cd" id="cb5">Comp Descr<br>
+<input type="checkbox" name="ci" id="cb6">Course ID<br>
+<input type="checkbox" name="ec" id="cb7">Equivalent course<br>
+<input type="checkbox" name="lt" id="cb8">Long title<br>
+<input type="checkbox" name="pr" id="cb9">Prereq<br>
+<input type="checkbox" name="subject" id="cb10">subject
+
+<button onclick="querycourseinfo()" class = "btn btn_login" type="button" id="query">Query DB</button>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBZ_nUpm0F0kEyjM3iApHT-dPJomgbTlP0",
+    authDomain: "conuhacksv.firebaseapp.com",
+    databaseURL: "https://conuhacksv.firebaseio.com",
+    projectId: "conuhacksv",
+    storageBucket: "conuhacksv.appspot.com",
+    messagingSenderId: "716642151510"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.database();
+ </script>
+<script src="scripts/logout.js"></script>
+<script src="scripts/DBoperations.js"></script>
+<script src="scripts/main.js"></script>
+</html>
